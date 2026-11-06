@@ -1,0 +1,1298 @@
+{
+  "engine": "pdfjs-dist",
+  "version": "6.5.438",
+  "node": "v24.18.1",
+  "files": {
+    "fontsizes.pdf": {
+      "loadMs": 69.0779,
+      "bytes": 953,
+      "pages": [
+        {
+          "page": 1,
+          "rotation": 0,
+          "cropBox": null,
+          "viewport": {
+            "width": 612,
+            "height": 792
+          },
+          "items": [
+            {
+              "expected": "Hamburgefonstiv 0123456789",
+              "found": true,
+              "exact": true,
+              "size": 8,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 107.16800000000006,
+              "expectedWidth": 107.16800000000006,
+              "dHeight": 0,
+              "fontHeight": 8,
+              "device": {
+                "left": 72,
+                "right": 179.16800000000006,
+                "top": 44,
+                "bottom": 52,
+                "width": 107.16800000000006,
+                "height": 8,
+                "fontHeight": 8
+              }
+            },
+            {
+              "expected": "Hamburgefonstiv 0123456789",
+              "found": true,
+              "exact": true,
+              "size": 10,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 133.96000000000004,
+              "expectedWidth": 133.96000000000004,
+              "dHeight": 0,
+              "fontHeight": 10,
+              "device": {
+                "left": 72,
+                "right": 205.96000000000004,
+                "top": 102,
+                "bottom": 112,
+                "width": 133.96000000000004,
+                "height": 10,
+                "fontHeight": 10
+              }
+            },
+            {
+              "expected": "Hamburgefonstiv 0123456789",
+              "found": true,
+              "exact": true,
+              "size": 12,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 2.842170943040401e-14,
+              "width": 160.75199999999998,
+              "expectedWidth": 160.75199999999995,
+              "dHeight": 0,
+              "fontHeight": 12,
+              "device": {
+                "left": 72,
+                "right": 232.75199999999998,
+                "top": 160,
+                "bottom": 172,
+                "width": 160.75199999999998,
+                "height": 12,
+                "fontHeight": 12
+              }
+            },
+            {
+              "expected": "Hamburgefonstiv 0123456789",
+              "found": true,
+              "exact": true,
+              "size": 14,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 187.54399999999995,
+              "expectedWidth": 187.54399999999995,
+              "dHeight": 0,
+              "fontHeight": 14,
+              "device": {
+                "left": 72,
+                "right": 259.544,
+                "top": 218,
+                "bottom": 232,
+                "width": 187.54399999999998,
+                "height": 14,
+                "fontHeight": 14
+              }
+            }
+          ],
+          "stats": {
+            "dx": {
+              "n": 4,
+              "max": 0,
+              "mean": 0
+            },
+            "dy": {
+              "n": 4,
+              "max": 0,
+              "mean": 0
+            },
+            "dWidth": {
+              "n": 4,
+              "max": 2.842170943040401e-14,
+              "mean": 7.105427357601002e-15
+            },
+            "dHeight": {
+              "n": 4,
+              "max": 0,
+              "mean": 0
+            },
+            "dEdge": {
+              "n": 0,
+              "max": 0,
+              "mean": 0
+            }
+          },
+          "allInsideViewport": true,
+          "textItemCount": 4
+        }
+      ]
+    },
+    "rotations.pdf": {
+      "loadMs": 1.3070999999999913,
+      "bytes": 1601,
+      "pages": [
+        {
+          "page": 1,
+          "rotation": 0,
+          "cropBox": null,
+          "viewport": {
+            "width": 300,
+            "height": 200
+          },
+          "items": [
+            {
+              "expected": "ROTATE",
+              "found": true,
+              "exact": true,
+              "size": 12,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 48.672,
+              "expectedWidth": 48.672,
+              "dHeight": 0,
+              "fontHeight": 12,
+              "device": {
+                "left": 40,
+                "right": 88.672,
+                "top": 108,
+                "bottom": 120,
+                "width": 48.672,
+                "height": 12,
+                "fontHeight": 12
+              }
+            },
+            {
+              "expected": "MARKER",
+              "found": true,
+              "exact": true,
+              "size": 12,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 51.336,
+              "expectedWidth": 51.336,
+              "dHeight": 0,
+              "fontHeight": 12,
+              "device": {
+                "left": 40,
+                "right": 91.336,
+                "top": 48,
+                "bottom": 60,
+                "width": 51.336,
+                "height": 12,
+                "fontHeight": 12
+              }
+            }
+          ],
+          "stats": {
+            "dx": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dy": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dWidth": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dHeight": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dEdge": {
+              "n": 0,
+              "max": 0,
+              "mean": 0
+            }
+          },
+          "allInsideViewport": true,
+          "textItemCount": 2
+        },
+        {
+          "page": 2,
+          "rotation": 90,
+          "cropBox": null,
+          "viewport": {
+            "width": 200,
+            "height": 300
+          },
+          "items": [
+            {
+              "expected": "ROTATE",
+              "found": true,
+              "exact": true,
+              "size": 12,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 48.672,
+              "expectedWidth": 48.672,
+              "dHeight": 0,
+              "fontHeight": 12,
+              "device": {
+                "left": 80,
+                "right": 92,
+                "top": 40,
+                "bottom": 88.672,
+                "width": 12,
+                "height": 48.672,
+                "fontHeight": 12
+              }
+            },
+            {
+              "expected": "MARKER",
+              "found": true,
+              "exact": true,
+              "size": 12,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 51.336,
+              "expectedWidth": 51.336,
+              "dHeight": 0,
+              "fontHeight": 12,
+              "device": {
+                "left": 140,
+                "right": 152,
+                "top": 40,
+                "bottom": 91.336,
+                "width": 12,
+                "height": 51.336,
+                "fontHeight": 12
+              }
+            }
+          ],
+          "stats": {
+            "dx": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dy": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dWidth": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dHeight": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dEdge": {
+              "n": 0,
+              "max": 0,
+              "mean": 0
+            }
+          },
+          "allInsideViewport": true,
+          "textItemCount": 2
+        },
+        {
+          "page": 3,
+          "rotation": 180,
+          "cropBox": null,
+          "viewport": {
+            "width": 300,
+            "height": 200
+          },
+          "items": [
+            {
+              "expected": "ROTATE",
+              "found": true,
+              "exact": true,
+              "size": 12,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 48.672,
+              "expectedWidth": 48.672,
+              "dHeight": 0,
+              "fontHeight": 12,
+              "device": {
+                "left": 211.328,
+                "right": 260,
+                "top": 80,
+                "bottom": 92,
+                "width": 48.672,
+                "height": 12,
+                "fontHeight": 12
+              }
+            },
+            {
+              "expected": "MARKER",
+              "found": true,
+              "exact": true,
+              "size": 12,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 51.336,
+              "expectedWidth": 51.336,
+              "dHeight": 0,
+              "fontHeight": 12,
+              "device": {
+                "left": 208.664,
+                "right": 260,
+                "top": 140,
+                "bottom": 152,
+                "width": 51.33600000000001,
+                "height": 12,
+                "fontHeight": 12
+              }
+            }
+          ],
+          "stats": {
+            "dx": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dy": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dWidth": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dHeight": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dEdge": {
+              "n": 0,
+              "max": 0,
+              "mean": 0
+            }
+          },
+          "allInsideViewport": true,
+          "textItemCount": 2
+        },
+        {
+          "page": 4,
+          "rotation": 270,
+          "cropBox": null,
+          "viewport": {
+            "width": 200,
+            "height": 300
+          },
+          "items": [
+            {
+              "expected": "ROTATE",
+              "found": true,
+              "exact": true,
+              "size": 12,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 48.672,
+              "expectedWidth": 48.672,
+              "dHeight": 0,
+              "fontHeight": 12,
+              "device": {
+                "left": 108,
+                "right": 120,
+                "top": 211.328,
+                "bottom": 260,
+                "width": 12,
+                "height": 48.672,
+                "fontHeight": 12
+              }
+            },
+            {
+              "expected": "MARKER",
+              "found": true,
+              "exact": true,
+              "size": 12,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 51.336,
+              "expectedWidth": 51.336,
+              "dHeight": 0,
+              "fontHeight": 12,
+              "device": {
+                "left": 48,
+                "right": 60,
+                "top": 208.664,
+                "bottom": 260,
+                "width": 12,
+                "height": 51.33600000000001,
+                "fontHeight": 12
+              }
+            }
+          ],
+          "stats": {
+            "dx": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dy": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dWidth": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dHeight": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dEdge": {
+              "n": 0,
+              "max": 0,
+              "mean": 0
+            }
+          },
+          "allInsideViewport": true,
+          "textItemCount": 2
+        }
+      ]
+    },
+    "cropbox.pdf": {
+      "loadMs": 4.679500000000019,
+      "bytes": 903,
+      "pages": [
+        {
+          "page": 1,
+          "rotation": 0,
+          "cropBox": [
+            50,
+            100,
+            400,
+            500
+          ],
+          "viewport": {
+            "width": 400,
+            "height": 500
+          },
+          "items": [
+            {
+              "expected": "CROP-A",
+              "found": true,
+              "exact": true,
+              "size": 12,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 46.668,
+              "expectedWidth": 46.668,
+              "dHeight": 0,
+              "fontHeight": 12,
+              "device": {
+                "left": 50,
+                "right": 96.668,
+                "top": 388,
+                "bottom": 400,
+                "width": 46.668000000000006,
+                "height": 12,
+                "fontHeight": 12
+              }
+            },
+            {
+              "expected": "CROP-B",
+              "found": true,
+              "exact": true,
+              "size": 12,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 46.668,
+              "expectedWidth": 46.668,
+              "dHeight": 0,
+              "fontHeight": 12,
+              "device": {
+                "left": 250,
+                "right": 296.668,
+                "top": 138,
+                "bottom": 150,
+                "width": 46.668000000000006,
+                "height": 12,
+                "fontHeight": 12
+              }
+            }
+          ],
+          "stats": {
+            "dx": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dy": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dWidth": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dHeight": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dEdge": {
+              "n": 0,
+              "max": 0,
+              "mean": 0
+            }
+          },
+          "allInsideViewport": true,
+          "textItemCount": 2
+        }
+      ]
+    },
+    "angled.pdf": {
+      "loadMs": 3.009900000000016,
+      "bytes": 926,
+      "pages": [
+        {
+          "page": 1,
+          "rotation": 0,
+          "cropBox": null,
+          "viewport": {
+            "width": 612,
+            "height": 792
+          },
+          "items": [
+            {
+              "expected": "ANGLE-30",
+              "found": true,
+              "exact": true,
+              "size": 12,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 58.01999999999999,
+              "expectedWidth": 58.01999999999999,
+              "dHeight": 0,
+              "fontHeight": 12,
+              "device": {
+                "left": 94,
+                "right": 150.24679392757312,
+                "top": 352.59769515458675,
+                "bottom": 392,
+                "width": 56.24679392757312,
+                "height": 39.402304845413255,
+                "fontHeight": 12
+              },
+              "expectedBox": {
+                "left": 94,
+                "right": 150.24679392757312,
+                "top": 352.59769515458675,
+                "bottom": 392
+              },
+              "dEdges": {
+                "left": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0
+              }
+            },
+            {
+              "expected": "ANGLE-90",
+              "found": true,
+              "exact": true,
+              "size": 12,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 58.01999999999999,
+              "expectedWidth": 58.01999999999999,
+              "dHeight": 0,
+              "fontHeight": 12,
+              "device": {
+                "left": 288,
+                "right": 300,
+                "top": 333.98,
+                "bottom": 392,
+                "width": 12,
+                "height": 58.01999999999998,
+                "fontHeight": 12
+              },
+              "expectedBox": {
+                "left": 288,
+                "right": 300,
+                "top": 333.98,
+                "bottom": 392
+              },
+              "dEdges": {
+                "left": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0
+              }
+            }
+          ],
+          "stats": {
+            "dx": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dy": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dWidth": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dHeight": {
+              "n": 2,
+              "max": 0,
+              "mean": 0
+            },
+            "dEdge": {
+              "n": 8,
+              "max": 0,
+              "mean": 0
+            }
+          },
+          "allInsideViewport": true,
+          "textItemCount": 2
+        }
+      ]
+    },
+    "fractional.pdf": {
+      "loadMs": 0.7386999999999944,
+      "bytes": 938,
+      "pages": [
+        {
+          "page": 1,
+          "rotation": 0,
+          "cropBox": null,
+          "viewport": {
+            "width": 612,
+            "height": 792
+          },
+          "items": [
+            {
+              "expected": "FRAC-A",
+              "found": true,
+              "exact": true,
+              "size": 9.37,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 34.875139999999995,
+              "expectedWidth": 34.875139999999995,
+              "dHeight": 0,
+              "fontHeight": 9.37,
+              "device": {
+                "left": 72.37,
+                "right": 107.24513999999999,
+                "top": 82.51999999999998,
+                "bottom": 91.88999999999999,
+                "width": 34.87513999999999,
+                "height": 9.370000000000005,
+                "fontHeight": 9.37
+              }
+            },
+            {
+              "expected": "FRAC-B",
+              "found": true,
+              "exact": true,
+              "size": 10.5,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 39.081,
+              "expectedWidth": 39.081,
+              "dHeight": 0,
+              "fontHeight": 10.5,
+              "device": {
+                "left": 113.61,
+                "right": 152.691,
+                "top": 125.57000000000005,
+                "bottom": 136.07000000000005,
+                "width": 39.081,
+                "height": 10.5,
+                "fontHeight": 10.5
+              }
+            },
+            {
+              "expected": "FRAC-C",
+              "found": true,
+              "exact": true,
+              "size": 11.73,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 44.30421,
+              "expectedWidth": 44.30421,
+              "dHeight": 0,
+              "fontHeight": 11.73,
+              "device": {
+                "left": 98.19,
+                "right": 142.49421,
+                "top": 168.79999999999995,
+                "bottom": 180.52999999999997,
+                "width": 44.30421000000001,
+                "height": 11.730000000000018,
+                "fontHeight": 11.73
+              }
+            }
+          ],
+          "stats": {
+            "dx": {
+              "n": 3,
+              "max": 0,
+              "mean": 0
+            },
+            "dy": {
+              "n": 3,
+              "max": 0,
+              "mean": 0
+            },
+            "dWidth": {
+              "n": 3,
+              "max": 0,
+              "mean": 0
+            },
+            "dHeight": {
+              "n": 3,
+              "max": 0,
+              "mean": 0
+            },
+            "dEdge": {
+              "n": 0,
+              "max": 0,
+              "mean": 0
+            }
+          },
+          "allInsideViewport": true,
+          "textItemCount": 3
+        }
+      ]
+    },
+    "cjk.pdf": {
+      "loadMs": 0.8204000000000065,
+      "bytes": 4133,
+      "pages": [
+        {
+          "page": 1,
+          "rotation": 0,
+          "cropBox": null,
+          "viewport": {
+            "width": 612,
+            "height": 792
+          },
+          "items": [
+            {
+              "expected": "中文测试：第十五章 英语发音练习。",
+              "found": true,
+              "exact": true,
+              "size": 12,
+              "dx": 0,
+              "dy": 0,
+              "dWidth": 0,
+              "width": 198,
+              "expectedWidth": 198,
+              "dHeight": 0,
+              "fontHeight": 12,
+              "device": {
+                "left": 72,
+                "right": 270,
+                "top": 80,
+                "bottom": 92,
+                "width": 198,
+                "height": 12,
+                "fontHeight": 12
+              }
+            }
+          ],
+          "stats": {
+            "dx": {
+              "n": 1,
+              "max": 0,
+              "mean": 0
+            },
+            "dy": {
+              "n": 1,
+              "max": 0,
+              "mean": 0
+            },
+            "dWidth": {
+              "n": 1,
+              "max": 0,
+              "mean": 0
+            },
+            "dHeight": {
+              "n": 1,
+              "max": 0,
+              "mean": 0
+            },
+            "dEdge": {
+              "n": 0,
+              "max": 0,
+              "mean": 0
+            }
+          },
+          "allInsideViewport": true,
+          "textItemCount": 1
+        }
+      ]
+    }
+  },
+  "perf": {
+    "pages": 100,
+    "bytes": 88847,
+    "loadMs": 5,
+    "extractMs": 145,
+    "msPerPage": 1.4,
+    "chars": 240000,
+    "textItems": 3000,
+    "heapUsedMB": 20.8,
+    "rssMB": 125.7
+  },
+  "corrupt": {
+    "threw": true,
+    "phase": "getDocument",
+    "name": "InvalidPDFException",
+    "message": "Invalid PDF structure."
+  },
+  "notext": {
+    "numPages": 1,
+    "textItems": 0
+  },
+  "empty": {
+    "empty.pdf": {
+      "numPages": 1,
+      "getPage1": "ok"
+    },
+    "zero-pages.pdf": {
+      "numPages": 0,
+      "getPage1": "Error: Invalid page request."
+    }
+  },
+  "realworld": {
+    "real-world.pdf": {
+      "pages": 9,
+      "bytes": 483537,
+      "loadMs": 2,
+      "extractMs": 55,
+      "msPerPage": 6.1,
+      "chars": 4106,
+      "items": 358,
+      "outside": 0,
+      "pageInfo": [
+        {
+          "page": 1,
+          "items": 8,
+          "outside": 0
+        },
+        {
+          "page": 2,
+          "items": 32,
+          "outside": 0
+        },
+        {
+          "page": 3,
+          "items": 23,
+          "outside": 0
+        },
+        {
+          "page": 4,
+          "items": 84,
+          "outside": 0
+        },
+        {
+          "page": 5,
+          "items": 15,
+          "outside": 0
+        },
+        {
+          "page": 6,
+          "items": 79,
+          "outside": 0
+        },
+        {
+          "page": 7,
+          "items": 27,
+          "outside": 0
+        },
+        {
+          "page": 8,
+          "items": 5,
+          "outside": 0
+        },
+        {
+          "page": 9,
+          "items": 85,
+          "outside": 0
+        }
+      ],
+      "sample": "DeepSpeed-MoE: Advancing MoE inference & training to power next generation AI scale ICML 2022 Samyam Rajbhandari , Conglong Li, Zhewei Yao, Minjia Zhang, Reza Yazdani Aminabadi, Ammar Ahmad Awan, Jeff"
+    },
+    "real-world-cjk.pdf": {
+      "pages": 63,
+      "bytes": 3728948,
+      "loadMs": 10,
+      "extractMs": 302,
+      "msPerPage": 4.8,
+      "chars": 29067,
+      "items": 3082,
+      "outside": 0,
+      "pageInfo": [
+        {
+          "page": 1,
+          "items": 15,
+          "outside": 0
+        },
+        {
+          "page": 2,
+          "items": 83,
+          "outside": 0
+        },
+        {
+          "page": 3,
+          "items": 70,
+          "outside": 0
+        },
+        {
+          "page": 4,
+          "items": 115,
+          "outside": 0
+        },
+        {
+          "page": 5,
+          "items": 82,
+          "outside": 0
+        },
+        {
+          "page": 6,
+          "items": 50,
+          "outside": 0
+        },
+        {
+          "page": 7,
+          "items": 89,
+          "outside": 0
+        },
+        {
+          "page": 8,
+          "items": 48,
+          "outside": 0
+        },
+        {
+          "page": 9,
+          "items": 50,
+          "outside": 0
+        },
+        {
+          "page": 10,
+          "items": 50,
+          "outside": 0
+        },
+        {
+          "page": 11,
+          "items": 10,
+          "outside": 0
+        },
+        {
+          "page": 12,
+          "items": 41,
+          "outside": 0
+        },
+        {
+          "page": 13,
+          "items": 54,
+          "outside": 0
+        },
+        {
+          "page": 14,
+          "items": 79,
+          "outside": 0
+        },
+        {
+          "page": 15,
+          "items": 87,
+          "outside": 0
+        },
+        {
+          "page": 16,
+          "items": 55,
+          "outside": 0
+        },
+        {
+          "page": 17,
+          "items": 52,
+          "outside": 0
+        },
+        {
+          "page": 18,
+          "items": 87,
+          "outside": 0
+        },
+        {
+          "page": 19,
+          "items": 29,
+          "outside": 0
+        },
+        {
+          "page": 20,
+          "items": 53,
+          "outside": 0
+        },
+        {
+          "page": 21,
+          "items": 50,
+          "outside": 0
+        },
+        {
+          "page": 22,
+          "items": 57,
+          "outside": 0
+        },
+        {
+          "page": 23,
+          "items": 6,
+          "outside": 0
+        },
+        {
+          "page": 24,
+          "items": 47,
+          "outside": 0
+        },
+        {
+          "page": 25,
+          "items": 35,
+          "outside": 0
+        },
+        {
+          "page": 26,
+          "items": 73,
+          "outside": 0
+        },
+        {
+          "page": 27,
+          "items": 19,
+          "outside": 0
+        },
+        {
+          "page": 28,
+          "items": 28,
+          "outside": 0
+        },
+        {
+          "page": 29,
+          "items": 39,
+          "outside": 0
+        },
+        {
+          "page": 30,
+          "items": 13,
+          "outside": 0
+        },
+        {
+          "page": 31,
+          "items": 39,
+          "outside": 0
+        },
+        {
+          "page": 32,
+          "items": 27,
+          "outside": 0
+        },
+        {
+          "page": 33,
+          "items": 34,
+          "outside": 0
+        },
+        {
+          "page": 34,
+          "items": 37,
+          "outside": 0
+        },
+        {
+          "page": 35,
+          "items": 26,
+          "outside": 0
+        },
+        {
+          "page": 36,
+          "items": 50,
+          "outside": 0
+        },
+        {
+          "page": 37,
+          "items": 14,
+          "outside": 0
+        },
+        {
+          "page": 38,
+          "items": 78,
+          "outside": 0
+        },
+        {
+          "page": 39,
+          "items": 102,
+          "outside": 0
+        },
+        {
+          "page": 40,
+          "items": 95,
+          "outside": 0
+        },
+        {
+          "page": 41,
+          "items": 103,
+          "outside": 0
+        },
+        {
+          "page": 42,
+          "items": 7,
+          "outside": 0
+        },
+        {
+          "page": 43,
+          "items": 54,
+          "outside": 0
+        },
+        {
+          "page": 44,
+          "items": 51,
+          "outside": 0
+        },
+        {
+          "page": 45,
+          "items": 71,
+          "outside": 0
+        },
+        {
+          "page": 46,
+          "items": 5,
+          "outside": 0
+        },
+        {
+          "page": 47,
+          "items": 30,
+          "outside": 0
+        },
+        {
+          "page": 48,
+          "items": 42,
+          "outside": 0
+        },
+        {
+          "page": 49,
+          "items": 56,
+          "outside": 0
+        },
+        {
+          "page": 50,
+          "items": 62,
+          "outside": 0
+        },
+        {
+          "page": 51,
+          "items": 5,
+          "outside": 0
+        },
+        {
+          "page": 52,
+          "items": 37,
+          "outside": 0
+        },
+        {
+          "page": 53,
+          "items": 46,
+          "outside": 0
+        },
+        {
+          "page": 54,
+          "items": 66,
+          "outside": 0
+        },
+        {
+          "page": 55,
+          "items": 9,
+          "outside": 0
+        },
+        {
+          "page": 56,
+          "items": 12,
+          "outside": 0
+        },
+        {
+          "page": 57,
+          "items": 89,
+          "outside": 0
+        },
+        {
+          "page": 58,
+          "items": 83,
+          "outside": 0
+        },
+        {
+          "page": 59,
+          "items": 27,
+          "outside": 0
+        },
+        {
+          "page": 60,
+          "items": 38,
+          "outside": 0
+        },
+        {
+          "page": 61,
+          "items": 45,
+          "outside": 0
+        },
+        {
+          "page": 62,
+          "items": 23,
+          "outside": 0
+        },
+        {
+          "page": 63,
+          "items": 53,
+          "outside": 0
+        }
+      ],
+      "sample": "DeepSpeed: 深層学習の訓練と推論を劇的に 高速化するフレームワーク Microsoft DeepSpeed Team 2023 年 6 月 7 日 このスライドでは、我々が研究開発している DeepSpeed というフレームワークに ついて、概要をご紹介します。 1 概要 • 大規模かつ高速な 深層学習 を容易に実現する様々な機能を持ったソフトウェア • オープンソースソフトウェアとして"
+    }
+  },
+  "notes": [],
+  "encrypted": {
+    "opened": false,
+    "name": "PasswordException",
+    "code": 1,
+    "message": "No password given"
+  }
+}

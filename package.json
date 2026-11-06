@@ -1,0 +1,55 @@
+{
+  "name": "doneright",
+  "version": "0.1.0-rc.1",
+  "description": "AI deliverable quality gate for DeepSeek Harness: evidence-based PDF acceptance checks",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./cli": "./dist/cli.js"
+  },
+  "bin": {
+    "doneright": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "cordis.patch.yml",
+    "locale",
+    "icon.svg",
+    "examples",
+    "LICENSE",
+    "README.md",
+    "docs"
+  ],
+  "engines": {
+    "node": ">=22.13.0",
+    "dsh": ">=0.2.2-rc.1"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test:build": "tsc -p tsconfig.test.json",
+    "test": "tsc -p tsconfig.test.json && node --test --test-isolation=none dist-test/tests/core.test.js dist-test/tests/layout.test.js dist-test/tests/e2e.test.js",
+    "prepublishOnly": "npm run build",
+    "check": "node dist/cli.js"
+  },
+  "dependencies": {
+    "pdfjs-dist": "6.5.438"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "pdf-lib": "^1.17.1",
+    "typescript": "^5.7.3"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+- insert:
+    - id: doneright
+      name: doneright
+      config: {}

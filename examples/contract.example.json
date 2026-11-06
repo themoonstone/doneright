@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0",
+  "contractId": "example-handbook",
+  "requirements": [
+    {
+      "id": "req-pages",
+      "kind": "page-count",
+      "min": 1,
+      "max": 5,
+      "severity": "major",
+      "source": "user"
+    },
+    {
+      "id": "req-section-one",
+      "kind": "section",
+      "value": "Section One",
+      "severity": "blocking",
+      "source": "user",
+      "confirmedByUser": true
+    },
+    {
+      "id": "req-phrase",
+      "kind": "phrase",
+      "value": "hello world",
+      "severity": "major",
+      "source": "user",
+      "confirmedByUser": true
+    }
+  ],
+  "options": {
+    "stripRunningHeaders": false,
+    "strictHeadings": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "perf100": {
+    "file": "perf-100p.pdf",
+    "code": 0,
+    "terminated": false,
+    "ms": 704,
+    "events": 101,
+    "progress": 100,
+    "done": {
+      "type": "done",
+      "numPages": 100,
+      "chars": 240000,
+      "processed": 100
+    },
+    "error": null,
+    "peakHeapMB": null
+  },
+  "cjk63": {
+    "file": "real-world-cjk.pdf",
+    "code": 0,
+    "terminated": false,
+    "ms": 752,
+    "events": 64,
+    "progress": 63,
+    "done": {
+      "type": "done",
+      "numPages": 63,
+      "chars": 29635,
+      "processed": 63
+    },
+    "error": null,
+    "peakHeapMB": null
+  },
+  "terminated": {
+    "file": "real-world-cjk.pdf",
+    "code": 1,
+    "terminated": true,
+    "ms": 429,
+    "events": 1,
+    "progress": 1,
+    "done": null,
+    "error": null,
+    "peakHeapMB": null
+  },
+  "parentAfterKill": {
+    "numPages": 1,
+    "ms": 164
+  }
+}

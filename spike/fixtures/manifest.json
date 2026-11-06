@@ -1,0 +1,290 @@
+{
+  "generatedAt": "2026-11-06T09:15:01.297Z",
+  "engine": "pdf-lib",
+  "files": {
+    "fontsizes.pdf": {
+      "kind": "coords",
+      "pages": [
+        {
+          "width": 612,
+          "height": 792,
+          "rotation": 0,
+          "cropBox": null,
+          "items": [
+            {
+              "str": "Hamburgefonstiv 0123456789",
+              "x": 72,
+              "y": 740,
+              "size": 8,
+              "font": "Helvetica",
+              "width": 107.16800000000006
+            },
+            {
+              "str": "Hamburgefonstiv 0123456789",
+              "x": 72,
+              "y": 680,
+              "size": 10,
+              "font": "Helvetica",
+              "width": 133.96000000000004
+            },
+            {
+              "str": "Hamburgefonstiv 0123456789",
+              "x": 72,
+              "y": 620,
+              "size": 12,
+              "font": "Helvetica",
+              "width": 160.75199999999995
+            },
+            {
+              "str": "Hamburgefonstiv 0123456789",
+              "x": 72,
+              "y": 560,
+              "size": 14,
+              "font": "Helvetica",
+              "width": 187.54399999999995
+            }
+          ]
+        }
+      ]
+    },
+    "rotations.pdf": {
+      "kind": "coords",
+      "pages": [
+        {
+          "width": 300,
+          "height": 200,
+          "rotation": 0,
+          "cropBox": null,
+          "items": [
+            {
+              "str": "ROTATE",
+              "x": 40,
+              "y": 80,
+              "size": 12,
+              "font": "Helvetica",
+              "width": 48.672
+            },
+            {
+              "str": "MARKER",
+              "x": 40,
+              "y": 140,
+              "size": 12,
+              "font": "Helvetica",
+              "width": 51.336
+            }
+          ]
+        },
+        {
+          "width": 300,
+          "height": 200,
+          "rotation": 90,
+          "cropBox": null,
+          "items": [
+            {
+              "str": "ROTATE",
+              "x": 40,
+              "y": 80,
+              "size": 12,
+              "font": "Helvetica",
+              "width": 48.672
+            },
+            {
+              "str": "MARKER",
+              "x": 40,
+              "y": 140,
+              "size": 12,
+              "font": "Helvetica",
+              "width": 51.336
+            }
+          ]
+        },
+        {
+          "width": 300,
+          "height": 200,
+          "rotation": 180,
+          "cropBox": null,
+          "items": [
+            {
+              "str": "ROTATE",
+              "x": 40,
+              "y": 80,
+              "size": 12,
+              "font": "Helvetica",
+              "width": 48.672
+            },
+            {
+              "str": "MARKER",
+              "x": 40,
+              "y": 140,
+              "size": 12,
+              "font": "Helvetica",
+              "width": 51.336
+            }
+          ]
+        },
+        {
+          "width": 300,
+          "height": 200,
+          "rotation": 270,
+          "cropBox": null,
+          "items": [
+            {
+              "str": "ROTATE",
+              "x": 40,
+              "y": 80,
+              "size": 12,
+              "font": "Helvetica",
+              "width": 48.672
+            },
+            {
+              "str": "MARKER",
+              "x": 40,
+              "y": 140,
+              "size": 12,
+              "font": "Helvetica",
+              "width": 51.336
+            }
+          ]
+        }
+      ]
+    },
+    "cropbox.pdf": {
+      "kind": "coords",
+      "pages": [
+        {
+          "width": 600,
+          "height": 800,
+          "rotation": 0,
+          "cropBox": [
+            50,
+            100,
+            400,
+            500
+          ],
+          "items": [
+            {
+              "str": "CROP-A",
+              "x": 100,
+              "y": 200,
+              "size": 12,
+              "font": "Helvetica",
+              "width": 46.668
+            },
+            {
+              "str": "CROP-B",
+              "x": 300,
+              "y": 450,
+              "size": 12,
+              "font": "Helvetica",
+              "width": 46.668
+            }
+          ]
+        }
+      ]
+    },
+    "angled.pdf": {
+      "kind": "coords",
+      "pages": [
+        {
+          "width": 612,
+          "height": 792,
+          "rotation": 0,
+          "cropBox": null,
+          "items": [
+            {
+              "str": "ANGLE-30",
+              "x": 100,
+              "y": 400,
+              "size": 12,
+              "angle": 30,
+              "font": "Helvetica",
+              "width": 58.01999999999999
+            },
+            {
+              "str": "ANGLE-90",
+              "x": 300,
+              "y": 400,
+              "size": 12,
+              "angle": 90,
+              "font": "Helvetica",
+              "width": 58.01999999999999
+            }
+          ]
+        }
+      ]
+    },
+    "fractional.pdf": {
+      "kind": "coords",
+      "pages": [
+        {
+          "width": 612,
+          "height": 792,
+          "rotation": 0,
+          "cropBox": null,
+          "items": [
+            {
+              "str": "FRAC-A",
+              "x": 72.37,
+              "y": 700.11,
+              "size": 9.37,
+              "font": "Helvetica",
+              "width": 34.875139999999995
+            },
+            {
+              "str": "FRAC-B",
+              "x": 113.61,
+              "y": 655.93,
+              "size": 10.5,
+              "font": "Helvetica",
+              "width": 39.081
+            },
+            {
+              "str": "FRAC-C",
+              "x": 98.19,
+              "y": 611.47,
+              "size": 11.73,
+              "font": "Helvetica",
+              "width": 44.30421
+            }
+          ]
+        }
+      ]
+    },
+    "cjk.pdf": {
+      "kind": "coords",
+      "pages": [
+        {
+          "width": 612,
+          "height": 792,
+          "rotation": 0,
+          "cropBox": null,
+          "items": [
+            {
+              "str": "中文测试：第十五章 英语发音练习。",
+              "x": 72,
+              "y": 700,
+              "size": 12,
+              "font": "SimHei",
+              "width": 198
+            }
+          ]
+        }
+      ]
+    },
+    "perf-100p.pdf": {
+      "kind": "perf",
+      "pages": 100,
+      "charsPerPage": 2400
+    },
+    "notext.pdf": {
+      "kind": "notext",
+      "pages": 1
+    },
+    "empty.pdf": {
+      "kind": "empty"
+    },
+    "corrupt.pdf": {
+      "kind": "corrupt"
+    }
+  }
+}

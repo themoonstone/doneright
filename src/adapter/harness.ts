@@ -1,8 +1,8 @@
-import { realpathSync } from 'node:fs';
-import { isAbsolute, relative, resolve } from 'node:path';
+import { existsSync, realpathSync } from 'node:fs';
+import { basename, dirname, isAbsolute, join, relative, resolve } from 'node:path';
 import type { VerificationOptions, VerificationResult } from '../core/types.js';
 import { loadContractFromFile } from '../core/contract.js';
-import { verify } from '../verification/run.js';
+import { verifyInWorker } from '../worker/runner.js';
 
 /** Minimal structural types: the plugin must not import DSH packages. */
 export interface ToolLike {
@@ -131,6 +131,26 @@ function canonical(path: string): string {
   }
 }
 
+/**
+ * Resolve symlinks on the nearest existing ancestor and keep any missing tail.
+ * Needed for report directories that do not exist yet: on macOS `/var` is a
+ * symlink to `/private/var`, so a not-yet-created path under `/var` would
+ * otherwise compare as "outside" a workspace root already resolved to
+ * `/private/var`.
+ */
+function canonicalAllowMissing(path: string): string {
+  const missing: string[] = [];
+  let probe = path;
+  while (probe && !existsSync(probe)) {
+    missing.unshift(basename(probe));
+    const parent = dirname(probe);
+    if (parent === probe) break;
+    probe = parent;
+  }
+  const resolved = canonical(probe);
+  return missing.length ? join(resolved, ...missing) : resolved;
+}
+
 function assertAuthorized(path: string, base: string, settings: Required<PluginConfig>): string {
   const absolute = canonical(isAbsolute(path) ? path : resolve(base, path));
   if (!settings.restrictToWorkspace) return absolute;
@@ -138,6 +158,21 @@ function assertAuthorized(path: string, base: string, settings: Required<PluginC
   const rel = relative(root, absolute);
   if (rel.startsWith('..') || isAbsolute(rel)) {
     throw new Error(`Refusing to read ${absolute}: it is outside the workspace (${base}).`);
+  }
+  return absolute;
+}
+
+/**
+ * Report output is also constrained to the workspace, so a crafted `outDir`
+ * argument cannot make the plugin write files anywhere on disk.
+ */
+function assertInsideWorkspace(path: string, base: string, settings: Required<PluginConfig>): string {
+  const absolute = canonicalAllowMissing(isAbsolute(path) ? path : resolve(base, path));
+  if (!settings.restrictToWorkspace) return absolute;
+  const root = canonical(base);
+  const rel = relative(root, absolute);
+  if (rel.startsWith('..') || isAbsolute(rel)) {
+    throw new Error(`Refusing to write reports to ${absolute}: it is outside the workspace (${base}).`);
   }
   return absolute;
 }
@@ -157,9 +192,10 @@ function buildOptions(
 ): VerificationOptions {
   const artifactPath = assertAuthorized(input.path, base, settings);
   const contractPath = input.contract ? assertAuthorized(input.contract, base, settings) : undefined;
+  const outDir = resolveOutDir(settings, base, input.outDir);
   const options: VerificationOptions = {
     artifactPath,
-    outDir: resolveOutDir(settings, base, input.outDir),
+    outDir: settings.restrictToWorkspace ? assertInsideWorkspace(outDir, base, settings) : outDir,
     limits: { maxBytes: settings.maxBytes, maxPages: settings.maxPages, timeoutMs: settings.timeoutMs },
     writeReports: true,
   };
@@ -308,7 +344,7 @@ export function toolDefinition(
         strictHeadings: typeof args.strictHeadings === 'boolean' ? args.strictHeadings : undefined,
         disabledChecks: Array.isArray(args.disabledChecks) ? args.disabledChecks.map(String) : undefined,
       });
-      const result = await verify(options);
+      const result = await verifyInWorker(options, { timeoutMs: settings.timeoutMs });
       return summarize(result);
     },
   };
@@ -327,6 +363,9 @@ export function commandDefinition(
     ): Promise<{ kind: 'success' | 'error'; text: string }> {
       const text = invocation.rawInput ?? invocation.input?.text ?? '';
       const parsed = parseCommandInput(text);
+      if (parsed.error) {
+        return { kind: 'error', text: parsed.error };
+      }
       if (!parsed.path) {
         return { kind: 'error', text: 'Usage: /doneright <path> [--contract <file>] [--strict] [--json]' };
       }
@@ -341,7 +380,7 @@ export function commandDefinition(
           const contract = options.contractPath ? await loadContractFromFile(options.contractPath) : undefined;
           if (contract) options.contract = contract;
         }
-        const result = await verify(options);
+        const result = await verifyInWorker(options, { timeoutMs: settings.timeoutMs });
         const summary = summarize(result);
         return { kind: 'success', text: parsed.json ? JSON.stringify(summary, null, 2) : formatResult(summary) };
       } catch (error) {
@@ -356,13 +395,23 @@ export function parseCommandInput(input: string): {
   contract?: string;
   strict: boolean;
   json: boolean;
+  error?: string;
 } {
   const tokens = input.match(/"[^"]*"|\S+/g)?.map((t) => t.replace(/^"|"$/g, '')) ?? [];
-  const out: { path?: string; contract?: string; strict: boolean; json: boolean } = { strict: false, json: false };
+  const out: { path?: string; contract?: string; strict: boolean; json: boolean; error?: string } = {
+    strict: false,
+    json: false,
+  };
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i]!;
     if (token === '--contract') {
-      out.contract = tokens[++i];
+      const value = tokens[i + 1];
+      if (value === undefined || value.startsWith('--')) {
+        out.error = '--contract requires a file path.';
+      } else {
+        out.contract = value;
+        i++;
+      }
     } else if (token === '--strict') {
       out.strict = true;
     } else if (token === '--json') {

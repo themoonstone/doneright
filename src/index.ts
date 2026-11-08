@@ -7,7 +7,7 @@ export { renderMarkdown } from './core/render.js';
 export type * from './core/types.js';
 
 export const name = 'doneright';
-export const inject = ['tools', 'commands'];
+export const inject = ['tools', 'commands', 'workingDirectory'];
 
 /**
  * DSH plugin entry point. Registers the `doneright_check` tool and the

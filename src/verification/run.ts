@@ -31,20 +31,19 @@ import { VERSION } from '../core/version.js';
 
 export async function verify(options: VerificationOptions): Promise<VerificationResult> {
   const limits: Limits = { ...DEFAULT_LIMITS, ...(options.limits ?? {}) };
-  const bytes = new Uint8Array(await readFile(options.artifactPath));
-  // pdfjs transfers (detaches) the input buffer, so record the size first.
-  const byteLength = bytes.byteLength;
-  const sha256 = createHash('sha256').update(bytes).digest('hex');
   const createdAt = new Date().toISOString();
   const id = reportId(new Date(createdAt));
 
-  if (bytes.byteLength > limits.maxBytes) {
+  // Stat before reading so the size limit protects memory, not just the result.
+  const info = await stat(options.artifactPath);
+  const byteLength = info.size;
+  if (byteLength > limits.maxBytes) {
     const contract = await resolveContract(options);
     return finalize({
       options,
       id,
       createdAt,
-      sha256,
+      sha256: '',
       bytes: byteLength,
       pages: 0,
       contract,
@@ -55,6 +54,10 @@ export async function verify(options: VerificationOptions): Promise<Verification
       previous: undefined,
     });
   }
+
+  const bytes = new Uint8Array(await readFile(options.artifactPath));
+  // pdfjs transfers (detaches) the input buffer, so record the hash now.
+  const sha256 = createHash('sha256').update(bytes).digest('hex');
 
   const fileTypeCheck = checkFileType(bytes, options.artifactPath);
   if (fileTypeCheck.status === 'FAIL') {
@@ -347,16 +350,6 @@ function guard(label: string, fn: () => CheckResult[]): CheckResult[] {
       },
     ];
   }
-}
-
-async function readArtifactBytes(path: string, limits: Limits): Promise<Uint8Array> {
-  const info = await stat(path);
-  if (info.size > limits.maxBytes) {
-    throw new Error(
-      `Artifact is ${info.size.toLocaleString('en-US')} bytes, over the ${limits.maxBytes.toLocaleString('en-US')} byte limit.`,
-    );
-  }
-  return new Uint8Array(await readFile(path));
 }
 
 function sizeLimitCheck(actual: number, max: number): CheckResult {

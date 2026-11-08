@@ -5,7 +5,7 @@ import { basename, join } from 'node:path';
 import { CONTRACT, drawText, makePdf, writeContract } from './fixtures.js';
 import { verify } from '../src/verification/run.js';
 import { normalizeContract } from '../src/core/contract.js';
-import { toolDefinition } from '../src/adapter/harness.js';
+import { parseCommandInput, toolDefinition } from '../src/adapter/harness.js';
 
 const run = (path: string, contract?: unknown, extra: Record<string, unknown> = {}) =>
   verify({
@@ -151,6 +151,43 @@ describe('end-to-end verification', () => {
       message = (error as Error).message;
     }
     expect(message).toContain('outside the workspace');
+  });
+
+  it('rejects an oversized artifact without reading it', async () => {
+    const pdf = await makePdf('big', (page, font) => {
+      drawText(page, font, 'x', 72, 700, 12);
+    });
+    const result = await run(pdf.path, undefined, { limits: { maxBytes: 8 } });
+    expect(result.report.status).toBe('ERROR');
+    expect(result.report.checks[0]?.checkId).toBe('pdf.limits.file-size');
+    expect(result.report.artifact.sha256).toBe('');
+  });
+
+  it('refuses to write reports outside the workspace', async () => {
+    const workspace = await mkdtemp(join(tmpdir(), 'doneright-ws2-'));
+    const outside = await mkdtemp(join(tmpdir(), 'doneright-out2-'));
+    await writeFile(join(workspace, 'x.pdf'), '%PDF-1.4\n', 'latin1');
+    const tool = toolDefinition({
+      workspaceRoot: workspace,
+      outDir: '',
+      maxBytes: 100 * 1024 * 1024,
+      maxPages: 300,
+      timeoutMs: 180_000,
+      restrictToWorkspace: true,
+    });
+    let message = '';
+    try {
+      await tool.execute({ path: 'x.pdf', outDir: outside }, {});
+    } catch (error) {
+      message = (error as Error).message;
+    }
+    expect(message).toContain('outside the workspace');
+  });
+
+  it('reports a missing --contract value', () => {
+    expect(parseCommandInput('x.pdf --contract').error).toBe('--contract requires a file path.');
+    expect(parseCommandInput('x.pdf --contract --strict').error).toBe('--contract requires a file path.');
+    expect(parseCommandInput('x.pdf --contract c.json').contract).toBe('c.json');
   });
 });
 

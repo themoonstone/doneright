@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { resolve } from 'node:path';
-import { verify } from './verification/run.js';
+import { verifyInWorker } from './worker/runner.js';
+import { DEFAULT_LIMITS } from './core/types.js';
 import { renderMarkdown } from './core/render.js';
 
 interface Args {
@@ -39,14 +40,17 @@ async function main(argv: string[]): Promise<number> {
   }
 
   try {
-    const result = await verify({
-      artifactPath: resolve(args.artifact),
-      ...(args.contract ? { contractPath: resolve(args.contract) } : {}),
-      outDir: resolve(args.out ?? '.doneright'),
-      ...(args.previous ? { previousReport: resolve(args.previous) } : {}),
-      ...(args.strict ? { strictHeadings: true } : {}),
-      writeReports: args.write,
-    });
+    const result = await verifyInWorker(
+      {
+        artifactPath: resolve(args.artifact),
+        ...(args.contract ? { contractPath: resolve(args.contract) } : {}),
+        outDir: resolve(args.out ?? '.doneright'),
+        ...(args.previous ? { previousReport: resolve(args.previous) } : {}),
+        ...(args.strict ? { strictHeadings: true } : {}),
+        writeReports: args.write,
+      },
+      { timeoutMs: DEFAULT_LIMITS.timeoutMs },
+    );
     const { report } = result;
     if (args.json) {
       process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);

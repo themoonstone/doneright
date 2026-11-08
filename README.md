@@ -73,6 +73,8 @@ npm pack                                  # 生成 doneright-<version>.tgz
 - 工具 `doneright_check`：Agent 在交付 PDF 前调用，参数 `path`（必填）、`contract`、`sources`、`outDir`、`previousReport`、`strictHeadings`、`disabledChecks`。
 - 命令 `/doneright`：`/doneright output/manual.pdf --contract contract.json`，不产生模型轮次。
 
+完整的安装步骤、配置项、契约写法与排错见 [`docs/INSTALL.md`](./docs/INSTALL.md)。
+
 相对路径按当前 **Session 的工作目录**解析（通过宿主的 `workingDirectory` 服务取得，而不是插件进程的 cwd）。需要固定目录时在插件 config 里设 `workspaceRoot`；默认 `restrictToWorkspace: true`，工作区外的文件会被拒绝读取。
 
 也可以直接使用 CLI：
@@ -102,6 +104,7 @@ node dist/cli.js check output/manual.pdf --contract examples/contract.example.js
 
 | 文档 | 内容 |
 | --- | --- |
+| [操作手册](./docs/INSTALL.md) | 从源码构建、安装到 DSH、契约写法、报告解读与排错 |
 | [产品需求文档 V0.2](./docs/PRD.md) | 需求基线：定位、契约、检查器规格、报告规范、架构、验收标准 |
 | [技术设计 V0.1](./docs/TECH_DESIGN.md) | 实现方案：类型、pdfjs 适配、worker 协议、检查器算法、测试与 Spike 计划 |
 | [评审记录](./docs/REVIEW.md) | 对 V0.1 的 15 条评审意见、核实过的 API 事实、保留与修改的理由 |
